@@ -58,9 +58,15 @@ function RoomPage() {
             roomId,
             message,
           });
+
+          setMessage("");
         }}
       >
-        <textarea placeholder="what do you want to say?"></textarea>
+        <textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="what do you want to say?"
+        ></textarea>
         <button type="submit">Send message</button>
       </form>
     </div>
